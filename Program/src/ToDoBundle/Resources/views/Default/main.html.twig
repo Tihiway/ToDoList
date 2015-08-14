@@ -38,22 +38,22 @@
     <h1 class="jumbotron text-center"> ToDo List</span> </h1>
 
     <p>
-    <a href="/" class="btn btn-default"> Edit </a>
+    <a href="/" class="btn btn-default"> Add </a>
 
     </p>
 
 
 
-    <ul>
+
     <table class="table">
         {% for item in itemss %}
-          <tr><td>{{ item.id }} {{item.name}}  {{ item.location }}  <input type="checkbox" class="cb" > </input> </td> </tr>
+          <tr><td>{{ item.id }} {{item.name}}  {{ item.location }} </td> <td> <input type="checkbox" class="cb align-right" > </input> </td> </tr>
         {% endfor %}
    </table>
-    </ul>
+
 
     <input type="submit" class="btn btn-success"> </input>
-    <input type="button" class="btn btn-default" id="dugm"> Select All </input>
+    <input type="button" class="btn btn-primary" id="dugm" value="Select all">  </input>
  </div>
 {% endblock %}
 
