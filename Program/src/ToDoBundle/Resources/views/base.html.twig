@@ -7,10 +7,16 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
         {% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('//code.jquery.com/jquery-1.11.3.min.js') }}"></script>
+        {% endblock %}
+
+
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
     </body>
 </html>

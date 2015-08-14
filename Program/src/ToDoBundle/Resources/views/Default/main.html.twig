@@ -5,8 +5,8 @@
 
 {% endblock %}
 
-{% block javascript %}
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+{% block js %}
+
     <script type="text/javascript">
 
         $(document).ready(function () {
@@ -46,13 +46,14 @@
 
 
     <table class="table">
+          <tr><td>id</td> <td>name</td><td>due_date</td><td>location</td><td>created</td></tr>
         {% for item in itemss %}
-          <tr><td>{{ item.id }} {{item.name}}  {{ item.location }} </td> <td> <input type="checkbox" class="cb align-right" > </input> </td> </tr>
+          <tr><td>{{ item.id }}</td> <td> {{item.name}} </td> <td> </td> <td> {{ item.location }} </td> <td> </td> <td> <input type="checkbox" class="cb align-right" > </input> </td> </tr>
         {% endfor %}
    </table>
 
 
-    <input type="submit" class="btn btn-success"> </input>
+    <input type="submit" class="btn btn-success" value="Delete"> </input>
     <input type="button" class="btn btn-primary" id="dugm" value="Select all">  </input>
  </div>
 {% endblock %}
