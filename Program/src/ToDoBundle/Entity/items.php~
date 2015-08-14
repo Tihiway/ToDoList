@@ -1,0 +1,40 @@
+<?php
+namespace ToDoBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="items")
+ */
+class items{
+
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=45)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="dateTime")
+     */
+    private $due_date;
+
+    /**
+     * @ORM\Column(type="string", length=45)
+     */
+    private $location;
+
+    /**
+     *  @ORM\Column(type="dateTime")
+     */
+    private $created;
+
+
+}

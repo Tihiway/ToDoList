@@ -1,0 +1,59 @@
+{%extends "ToDoBundle::base.html.twig"%}
+{% block title %} Title  {%endblock%}
+{% block head %}
+
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#dugm").click(function () {
+                $(".cb").each(function(){
+                    if (this.checked)
+                        $(".cb").attr('checked', "checked");
+                    else
+                        $(".cb").removeAttr('checked');
+                });
+            });
+        });
+
+
+
+    </script>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+{% block body %}
+
+    <h1 class="jumbotron"> Title </h1>
+<div class="container">
+    <p>
+    <a href="/" class="btn btn-default"> Edit </a>
+
+    </p>
+
+
+
+    <ul>
+    <table class="table">
+        {% for item in itemss %}
+          <tr><td>{{ item.id }} {{item.name}}  {{ item.location }}  <input type="checkbox" class="cb" > </input> </td> </tr>
+        {% endfor %}
+   </table>
+    </ul>
+
+    <input type="submit" class="btn btn-success"> </input>
+    <input type="button" class="btn btn-default" id="dugm"> Select All </input>
+ </div>
+{% endblock %}
+
