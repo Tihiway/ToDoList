@@ -12,7 +12,7 @@ use ToDoBundle\Form;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/main")
      */
     public function indexAction()
     {

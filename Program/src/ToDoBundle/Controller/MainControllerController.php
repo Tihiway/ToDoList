@@ -13,8 +13,9 @@ use ToDoBundle\Form;
 
 class MainControllerController extends Controller
 {
+
     /**
-     * @Route("/main")
+     * @Route("/")
      */
     public function mainAction()
     {

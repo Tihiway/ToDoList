@@ -3,12 +3,19 @@
 
 
 {% block body %}
+    <div class="container">
 
-    <h1> Edit page</h1>
-    {{ form_start(form)}}
-    {{ form_row(form.name) }}
-    {{ form_row(form.due_date) }}
-    {{ form_row(form.location) }}
-    {{ form_row(form.created) }}
-    {{ form_end(form) }}
+    <h1 class="text-center">Add item</h1>
+        <table class="table-bordered" align="center">
+
+      <tr> <td> {{ form_start(form)}} </td> </tr>
+      <tr> <td>{{ form_row(form.name) }}  </td> </tr>
+      <tr> <td> {{ form_row(form.due_date) }}  </td> </tr>
+      <tr> <td>  {{ form_row(form.location) }}  </td> </tr>
+      <tr> <td> {{ form_row(form.created) }}  </td> </tr>
+      <tr> <td>  {{ form_end(form) }}  </td> </tr>
+
+        </table>
+
+    </div>
 {% endblock %}
