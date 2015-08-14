@@ -75,10 +75,10 @@ class items{
     /**
      * Set due_date
      *
-     * @param \dateTime $dueDate
+     * @param \DateTime $dueDate
      * @return items
      */
-    public function setDueDate(\dateTime $dueDate)
+    public function setDueDate(\DateTime $dueDate)
     {
         $this->due_date = $dueDate;
 
@@ -88,7 +88,7 @@ class items{
     /**
      * Get due_date
      *
-     * @return \datetime
+     * @return \DateTime
      */
     public function getDueDate()
     {

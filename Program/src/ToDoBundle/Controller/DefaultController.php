@@ -33,7 +33,6 @@ class DefaultController extends Controller
                 $em->persist($Items);
                 $em->flush();
 
-                $id=0;
 
 
                     $repository = $this->getDoctrine()
